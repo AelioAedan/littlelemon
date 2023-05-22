@@ -5,7 +5,13 @@ function Nav() {
         <>
         <nav>
             <ul>
-                <li>nav</li>
+                <li><img src="Logo.svg" alt="Little Lemon Logo"></img></li>
+                <li><a>Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Menu</a></li>
+                <li><a>Reservations</a></li>
+                <li><a>Order Online</a></li>
+                <li><a>Login</a></li>
             </ul>
         </nav>
         </>
