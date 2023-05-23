@@ -8,12 +8,10 @@ import { ChakraProvider } from '@chakra-ui/react';
 function App() {
   return (
     <ChakraProvider>
-    <div className="App">
-      <Header />
       <Nav />
+      <Header />
       <Main />
       <Footer />
-    </div>
     </ChakraProvider>
   );
 }

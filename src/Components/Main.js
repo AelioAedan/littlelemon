@@ -1,9 +1,12 @@
+import Specials from "./Specials";
 
 
 function Main() {
     return(
         <>
-        <main>main</main>
+        <main>
+        <Specials />
+        </main>
         </>
     )
 }
