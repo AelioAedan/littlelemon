@@ -19,7 +19,7 @@ function Specials() {
                             Online Menu
                         </Button>
                 </HStack>
-                <SimpleGrid columns={3} spacing={10}>
+                <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(300px, 1fr))'>
                     <Card
                         dishImageSrc={"greek salad-img.jpg"}
                         dishName={"Greek Salad"}

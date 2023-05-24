@@ -1,3 +1,4 @@
+import About from "./About";
 import Specials from "./Specials";
 import Testimonials from "./Testimonials";
 
@@ -8,6 +9,7 @@ function Main() {
         <main>
         <Specials />
         <Testimonials />
+        <About />
         </main>
         </>
     )
