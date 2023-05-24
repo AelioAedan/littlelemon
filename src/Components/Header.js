@@ -6,11 +6,11 @@ function Header() {
         <Container maxW={'100vw'} bg={"var(--primary)"}>
             <Container maxW={"container.xl"} pt={"5"} pb={"5"} minH={420}>
                 <HStack>
-                    <VStack maxW={"60ch"} alignItems={"flex-start"} justifyContent={"center"} pt={10}>
-                        <Heading as={"header"} fontFamily={'Markazi Text, serif'} fontSize={80} color={"var(--primary2)"}>
+                    <VStack maxW={"50ch"} alignItems={"flex-start"} justifyContent={"center"} pt={10}>
+                        <Heading as={"header"} fontFamily={'Markazi Text, serif'} fontSize={"5em"} color={"var(--primary2)"}>
                             Little Lemon
                         </Heading>
-                        <Heading fontFamily={'Karla, serif'} fontSize={32} color={"var(--highlight)"} pt={"-1"}>
+                        <Heading fontFamily={'Markazi Text, serif'} color={"var(--highlight)"}>
                             Chicago
                         </Heading>
                         <Text color={"var(--highlight)"} pt={8} pb={8}>

@@ -4,7 +4,7 @@ import { ArrowRightIcon } from '@chakra-ui/icons';
 
 const dishCard = ({ dishImageSrc, dishName, dishPrice, dishDescription }) => {
     return(
-        <Card>
+        <Card bg={"var(--highlight)"}>
             <CardHeader p={0}>
                 <Image src={dishImageSrc} alt={dishName} borderTopRadius={16} pb={5} fit={"cover"} />
                 <HStack pl={5} pr={5}>

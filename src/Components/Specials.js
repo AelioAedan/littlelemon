@@ -4,11 +4,11 @@ import Card from "./Card";
 
 function Specials() {
     return(
-        <Container maxW={"100vw"} bg={"tomato"}minH={660}>
+        <Container maxW={"100vw"} bg={"var(--secondary)"} minH={660}>
             <Container maxW={"container.xl"} pt={5} pb={12}>
                 <HStack pt={16} pb={8}>
-                    <Heading>
-                        Specials
+                    <Heading fontFamily={"Markazi-Text, serif"} fontSize={"3em"}>
+                        This weeks specials!
                     </Heading>
                     <Spacer></Spacer>
                     <Button size={"lg"} bg={"var(--primary2)"} color={"var(--higlight2)"}
@@ -22,7 +22,7 @@ function Specials() {
                 <SimpleGrid columns={3} spacing={10}>
                     <Card
                         dishImageSrc={"greek salad-img.jpg"}
-                        dishName={"Greek salad"}
+                        dishName={"Greek Salad"}
                         dishPrice={"$12.99"}
                         dishDescription={"The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. "}
                     />

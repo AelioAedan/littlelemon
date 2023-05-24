@@ -1,4 +1,5 @@
 import Specials from "./Specials";
+import Testimonials from "./Testimonials";
 
 
 function Main() {
@@ -6,6 +7,7 @@ function Main() {
         <>
         <main>
         <Specials />
+        <Testimonials />
         </main>
         </>
     )
