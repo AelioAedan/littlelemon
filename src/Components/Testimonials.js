@@ -1,5 +1,5 @@
 import { StarIcon } from "@chakra-ui/icons";
-import { Container, Heading, SimpleGrid, Card, CardHeader, CardBody, Text, CardFooter, Button, Icon, Avatar, HStack, Spacer } from "@chakra-ui/react";
+import { Container, Heading, SimpleGrid, Card, CardHeader, CardBody, Text, CardFooter, Avatar, HStack } from "@chakra-ui/react";
 
 
 function Testimonials() {

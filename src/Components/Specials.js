@@ -1,4 +1,4 @@
-import { Box, Button, Container, Flex, HStack, Heading, SimpleGrid, Spacer } from "@chakra-ui/react";
+import { Button, Container, HStack, Heading, SimpleGrid, Spacer } from "@chakra-ui/react";
 import Card from "./Card";
 
 
@@ -7,7 +7,7 @@ function Specials() {
         <Container maxW={"100vw"} bg={"var(--secondary)"} minH={660}>
             <Container maxW={"container.xl"} pt={5} pb={12}>
                 <HStack pt={16} pb={8}>
-                    <Heading fontFamily={"Markazi-Text, serif"} fontSize={"3em"}>
+                    <Heading fontFamily={"Markazi-Text, serif"} fontSize={"3em"} color={"var(--primary)"}>
                         This weeks specials!
                     </Heading>
                     <Spacer></Spacer>
