@@ -10,7 +10,7 @@ function Testimonials() {
                     Testimonials
                 </Heading>
                 <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(250px, 1fr))'>
-                    <Card>
+                    <Card bg={"var(--highlight)"}>
                         <CardHeader>
                             <StarIcon />
                             <StarIcon ml={1} />
@@ -28,7 +28,7 @@ function Testimonials() {
                             <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</Text>
                         </CardFooter>
                     </Card>
-                    <Card>
+                    <Card bg={"var(--highlight)"}>
                         <CardHeader>
                             <StarIcon />
                             <StarIcon ml={1} />
@@ -46,7 +46,7 @@ function Testimonials() {
                             <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</Text>
                         </CardFooter>
                     </Card>
-                    <Card>
+                    <Card bg={"var(--highlight)"}>
                         <CardHeader>
                             <StarIcon />
                             <StarIcon ml={1} />
@@ -63,7 +63,7 @@ function Testimonials() {
                             <Text>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</Text>
                         </CardFooter>
                     </Card>
-                    <Card>
+                    <Card bg={"var(--highlight)"}>
                         <CardHeader>
                             <StarIcon />
                             <StarIcon ml={1} />
