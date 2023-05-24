@@ -10,13 +10,17 @@ function Header() {
                         <Heading as={"header"} fontFamily={'Markazi Text, serif'} fontSize={80} color={"var(--primary2)"}>
                             Little Lemon
                         </Heading>
-                        <Heading fontFamily={'Karla, serif'} fontSize={32} color={"var(--highlight)"}>
+                        <Heading fontFamily={'Karla, serif'} fontSize={32} color={"var(--highlight)"} pt={"-1"}>
                             Chicago
                         </Heading>
-                        <Text color={"var(--highlight)"} pt={8} pb={8} fontSize={18}>
+                        <Text color={"var(--highlight)"} pt={8} pb={8}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </Text>
-                        <Button size={"lg"} bg={"var(--primary2)"} color={"var(--higlight2)"}>
+                        <Button size={"lg"} bg={"var(--primary2)"} color={"var(--higlight2)"}
+                            _hover={{
+                                background: "var(--secondary2)",
+                            }}
+                        >
                             Reserve a Table
                         </Button>
                     </VStack>

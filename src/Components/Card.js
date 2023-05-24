@@ -6,19 +6,19 @@ const dishCard = ({ dishImageSrc, dishName, dishPrice, dishDescription }) => {
     return(
         <Card>
             <CardHeader p={0}>
-                <Image src={dishImageSrc} alt={dishName} borderTopRadius={16} pb={5} />
-                <HStack>
-                    <Text>{dishName}</Text>
+                <Image src={dishImageSrc} alt={dishName} borderTopRadius={16} pb={5} fit={"cover"} />
+                <HStack pl={5} pr={5}>
+                    <Text fontSize={32} fontFamily={'Markazi Text, serif'}>{dishName}</Text>
                     <Spacer />
-                    <Badge>{dishPrice}</Badge>
+                    <Badge fontSize={18} bg={"var(--primary2)"}>{dishPrice}</Badge>
                 </HStack>
             </CardHeader>
             <CardBody>
                 <Text>{dishDescription}</Text>
             </CardBody>
-            <CardFooter>
-                <Text>Order a delivery</Text>
-                <ArrowRightIcon />
+            <CardFooter alignItems={"center"}>
+                <Text fontFamily={'Markazi Text, serif'} fontSize={24}>Order a delivery</Text>
+                <ArrowRightIcon ml={5} />
             </CardFooter>
         </Card>
     )
