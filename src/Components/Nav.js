@@ -2,14 +2,16 @@ import {
   Box,
   Flex,
   HStack,
-  Link,
   IconButton,
   useDisclosure,
   Stack,
+  Link,
   Img,
   Spacer,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+
+
 
 const Links = ['Home', 'Menu', 'About', 'Reservations', 'Order Online', 'Login' ];
 
@@ -18,11 +20,12 @@ const NavLink = ({ children }) => (
     px={2}
     py={1}
     rounded={'md'}
+    href={'#' + children}
     _hover={{
       textDecoration: 'none',
       bg: 'var(--primary2)',
     }}
-    href={'#'}>
+    >
     {children}
   </Link>
 );

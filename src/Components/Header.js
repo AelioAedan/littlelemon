@@ -3,7 +3,7 @@ import { Button, Container, HStack, Heading, Image, Spacer, Text, VStack } from 
 
 function Header() {
     return(
-        <Container maxW={'100vw'} bg={"var(--primary)"} pt={"50"}>
+        <Container maxW={'100vw'} bg={"var(--primary)"} pt={"50"} id="Home">
             <Container maxW={"container.xl"} pt={"50"} pb={"50"} minH={420}>
                 <HStack>
                     <VStack maxW={"50ch"} alignItems={"flex-start"} justifyContent={"center"} pt={10}>

@@ -4,7 +4,7 @@ import { Container, Heading, SimpleGrid, Card, CardHeader, CardBody, Text, CardF
 
 function Testimonials() {
     return(
-        <Container maxW={"100vw"} bg={"var(--primary)"} minH={660}>
+        <Container maxW={"100vw"} bg={"var(--primary)"} minH={660} id="About">
             <Container maxW={"container.xl"} pt={5} pb={12}>
                 <Heading textAlign={"center"} pt={16} pb={8} color={"var(--highlight)"} fontFamily={"Markazi Text, serif"} fontSize={"3em"} letterSpacing={1.2}>
                     Testimonials

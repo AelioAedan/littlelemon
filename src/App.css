@@ -13,6 +13,7 @@
   font-family: 'Karla', sans-serif;
   font-size: 18px;
   color:#333333;
+  scroll-behavior: smooth;
 }
 
 a {
