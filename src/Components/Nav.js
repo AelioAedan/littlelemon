@@ -13,14 +13,31 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
 
 
-const Links = ['Home', 'Menu', 'About', 'Reservations', 'Order Online', 'Login' ];
+const Links = ['Home', 'Menu', 'About' ];
 
 const NavLink = ({ children }) => (
   <Link
     px={2}
     py={1}
     rounded={'md'}
-    href={'#' + children}
+    href={ '#' + children}
+    _hover={{
+      textDecoration: 'none',
+      bg: 'var(--primary2)',
+    }}
+    >
+    {children}
+  </Link>
+);
+
+const Links2 = ['Reservations', 'Order Online', 'Login' ];
+
+const NavLink2 = ({ children }) => (
+  <Link
+    px={2}
+    py={1}
+    rounded={'md'}
+    href={children}
     _hover={{
       textDecoration: 'none',
       bg: 'var(--primary2)',
@@ -55,6 +72,9 @@ export default function Nav() {
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
+              {Links2.map((link) => (
+                <NavLink2 key={link}>{link}</NavLink2>
+              ))}
             </HStack>
           </HStack>
         </Flex>
@@ -64,6 +84,9 @@ export default function Nav() {
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
+              ))}
+              {Links2.map((link) => (
+                <NavLink2 key={link}>{link}</NavLink2>
               ))}
             </Stack>
           </Box>
