@@ -1,33 +1,41 @@
 import './App.css';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
-import Main from './Components/Main';
 import Nav from './Components/Nav';
-import { ChakraProvider } from '@chakra-ui/react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Specials from './Components/Specials';
-import About from './Components/About';
+import { createBrowserRouter, createRoutesFromElements, Route, Outlet, RouterProvider } from 'react-router-dom';
 import BookingPage from './Components/BookingPage';
+import Home from './Components/Home';
+import Specials from './Components/Specials';
 
 function App() {
+
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path='/' element={<Root />}>
+        <Route index element={<Home />} />
+        <Route path='/reservations' element={<BookingPage />} />
+        <Route path='#Menu' element={<Home />} />
+      </Route>
+    )
+  )
+
+
   return (
-    <Router>
-      <ChakraProvider>
-      <Routes>
-        <Route exact path='' element={<Nav />} />
-        <Route exact path='#header' element={<Header />} />
-        <Route exact path='#specials' element={<Specials />} />
-        <Route exact path='/reservations' element={<BookingPage />} />
-        <Route exact path='/about' element={<About />} />
-        <Route exact path='/footer' element={<Footer />} />
-      </Routes>
-      <Nav />
-      <Header />
-      <Main />
-      <Footer />
-    </ChakraProvider>
-    </Router>
+    <>
+      <RouterProvider router={router} />
+    </>
   );
 }
 
+
+const Root = () => {
+  return(
+    <>
+    <Nav />
+    <div>
+      <Outlet />
+    </div>
+    </>
+  )
+}
+
 export default App;
+

@@ -1,8 +1,13 @@
 import React from 'react';
+import BookingForm from './BookingForm';
+import Nav from './Nav';
 
 function BookingPage() {
   return (
-    <div id='Reservations'>BookingPage</div>
+    <div id='Reservations'>
+    <Nav />
+    <BookingForm />
+    </div>
   )
 }
 

@@ -1,4 +1,4 @@
-import { Container, HStack, Heading, Image, Text, VStack, Spacer, Box, Flex, Show, Hide } from "@chakra-ui/react";
+import { Container, HStack, Heading, Image, Text, VStack, Show, Hide } from "@chakra-ui/react";
 
 function About() {
     return(

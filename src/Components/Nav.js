@@ -10,42 +10,9 @@ import {
   Spacer,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { Link as ReactRouterLink } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
-
-
-const Links = ['Home', 'Menu', 'About' ];
-
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    href={ '#' + children}
-    _hover={{
-      textDecoration: 'none',
-      bg: 'var(--primary2)',
-    }}
-    >
-    {children}
-  </Link>
-);
-
-const Links2 = ['Reservations', 'Order Online', 'Login' ];
-
-const NavLink2 = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={'md'}
-    href={children}
-    _hover={{
-      textDecoration: 'none',
-      bg: 'var(--primary2)',
-    }}
-    >
-    {children}
-  </Link>
-);
 
 export default function Nav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -69,12 +36,45 @@ export default function Nav() {
               as={'nav'}
               spacing={4}
               display={{ base: 'none', md: 'flex' }}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-              {Links2.map((link) => (
-                <NavLink2 key={link}>{link}</NavLink2>
-              ))}
+              <Link
+                as={HashLink}
+                to='/#home'
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'var(--primary2)',
+                }}
+              >
+                Home
+              </Link>
+              <Link
+                as={ReactRouterLink}
+                to='/reservations'
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'var(--primary2)',
+                }}
+              >
+                Reservations
+              </Link>
+              <Link
+                as={HashLink}
+                to='/#menu'
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'var(--primary2)',
+                }}
+              >
+                Specials
+              </Link>
             </HStack>
           </HStack>
         </Flex>
@@ -82,12 +82,42 @@ export default function Nav() {
         {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
-              {Links2.map((link) => (
-                <NavLink2 key={link}>{link}</NavLink2>
-              ))}
+            <Link
+                as={ReactRouterLink}
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'var(--primary2)',
+                }}
+              >
+                Home
+              </Link>
+              <Link
+                as={ReactRouterLink}
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'var(--primary2)',
+                }}
+              >
+                Home
+              </Link>
+              <Link
+                as={ReactRouterLink}
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'var(--primary2)',
+                }}
+              >
+                Home
+              </Link>
             </Stack>
           </Box>
         ) : null}
