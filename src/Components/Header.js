@@ -1,6 +1,5 @@
 import { Button, Container, HStack, Heading, Image, Spacer, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 
 
 function Header() {
