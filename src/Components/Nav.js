@@ -50,6 +50,33 @@ export default function Nav() {
                 Home
               </Link>
               <Link
+                as={HashLink}
+                to='/#menu'
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'var(--primary2)',
+                }}
+              >
+                Specials
+              </Link>
+              <Link
+                as={HashLink}
+                to='/#about'
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'var(--primary2)',
+                }}
+              >
+                About
+              </Link>
+              <Spacer />
+              <Link
                 as={ReactRouterLink}
                 to='/reservations'
                 px={2}
@@ -61,6 +88,26 @@ export default function Nav() {
                 }}
               >
                 Reservations
+              </Link>
+            </HStack>
+          </HStack>
+        </Flex>
+
+        {isOpen ? (
+          <Box pb={4} display={{ md: 'none' }}>
+            <Stack as={'nav'} spacing={4}>
+            <Link
+                as={HashLink}
+                to='/#home'
+                px={2}
+                py={1}
+                rounded={'md'}
+                _hover={{
+                  textDecoration: 'none',
+                  bg: 'var(--primary2)',
+                }}
+              >
+                Home
               </Link>
               <Link
                 as={HashLink}
@@ -75,15 +122,9 @@ export default function Nav() {
               >
                 Specials
               </Link>
-            </HStack>
-          </HStack>
-        </Flex>
-
-        {isOpen ? (
-          <Box pb={4} display={{ md: 'none' }}>
-            <Stack as={'nav'} spacing={4}>
-            <Link
-                as={ReactRouterLink}
+              <Link
+                as={HashLink}
+                to='/#about'
                 px={2}
                 py={1}
                 rounded={'md'}
@@ -92,10 +133,12 @@ export default function Nav() {
                   bg: 'var(--primary2)',
                 }}
               >
-                Home
+                About
               </Link>
+              <Spacer />
               <Link
                 as={ReactRouterLink}
+                to='/reservations'
                 px={2}
                 py={1}
                 rounded={'md'}
@@ -104,19 +147,7 @@ export default function Nav() {
                   bg: 'var(--primary2)',
                 }}
               >
-                Home
-              </Link>
-              <Link
-                as={ReactRouterLink}
-                px={2}
-                py={1}
-                rounded={'md'}
-                _hover={{
-                  textDecoration: 'none',
-                  bg: 'var(--primary2)',
-                }}
-              >
-                Home
+                Reservations
               </Link>
             </Stack>
           </Box>

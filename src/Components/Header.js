@@ -1,4 +1,6 @@
 import { Button, Container, HStack, Heading, Image, Spacer, Text, VStack } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 
 function Header() {
@@ -21,7 +23,7 @@ function Header() {
                                 background: "var(--secondary2)",
                             }}
                         >
-                            Reserve a Table
+                            <Link to={'/reservations'}> Reserve a Table </Link>
                         </Button>
                     </VStack>
                     <Spacer />
