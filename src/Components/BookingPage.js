@@ -1,15 +1,70 @@
-import React from 'react';
+
+
+import { useState, useReducer } from 'react';
 import BookingForm from './BookingForm';
-import Nav from './Nav';
-import Footer from './Footer';
-import { Container } from '@chakra-ui/react';
+
+
+const initializeTimes = ([
+  '17:00',
+  '18:00',
+  '19:00',
+  '20:00',
+  '21:00',
+  '22:00',
+]);
 
 function BookingPage() {
+
+  const [date, setDate] = useState('');
+
+  const changeDate = (event) => {
+    setDate(event.target.value);
+    dispatch({date: event.target.value})
+  };
+
+  const [number, setNumber] = useState(1);
+
+  const changeNumber = (event) => {
+    setNumber(event.target.value)
+  };
+
+  const [occasion, setOccasion] = useState('');
+
+  const changeOccasion = (event) => {
+    setOccasion(event.target.value)
+  };
+
+  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes)
+
+  function updateTimes(state, action) {
+    switch (action.type) {
+      default:
+        return state;
+    }
+  };
+
+
+  const [selectedTime, setSelectedTime] = useState('');
+
+  const changeSelectedTime = (event) => {
+    setSelectedTime(event.target.value);
+  }
+
+
   return (
     <div id='Reservations'>
-    <Nav />
-      <BookingForm/>
-    <Footer />
+    <BookingForm
+      date={date}
+      changeDate={changeDate}
+      dispatch={dispatch}
+      selectedTime={selectedTime}
+      changeSelectedTime={changeSelectedTime}
+      availableTimes={availableTimes}
+      number={number}
+      changeNumber={changeNumber}
+      occasion={occasion}
+      changeOccasion={changeOccasion}
+    />
     </div>
   )
 }
