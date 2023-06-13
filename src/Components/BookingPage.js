@@ -1,19 +1,24 @@
 
 
-import { useState, useReducer } from 'react';
+import { useState, useReducer, useEffect } from 'react';
 import BookingForm from './BookingForm';
 
-
-const initializeTimes = ([
-  '17:00',
-  '18:00',
-  '19:00',
-  '20:00',
-  '21:00',
-  '22:00',
-]);
-
 function BookingPage() {
+
+const today = new Date ();
+
+  const [initializeTimes, setInitializeTimes] = useState(today) ;
+
+  const fetchData = () => {
+    fetch('https://raw.githubusercontent.com/Meta-Front-End-Developer-PC/capstone/master/api.js')
+      .then((response) => response.json())
+      .then((jsonData) => setInitializeTimes(jsonData))
+      .catch((error) => console.log(error));
+  };
+
+  useEffect((today) => {
+    fetchData(today)
+  }, []);
 
   const [date, setDate] = useState('');
 
@@ -56,7 +61,6 @@ function BookingPage() {
     <BookingForm
       date={date}
       changeDate={changeDate}
-      dispatch={dispatch}
       selectedTime={selectedTime}
       changeSelectedTime={changeSelectedTime}
       availableTimes={availableTimes}
