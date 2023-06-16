@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import BookingForm from "./Components/BookingForm";
 
+const availableTimes = ['10:00', '12:00', '14:00']; // Mock-Wert für availableTimes
 render(
     <BookingForm
       date=""

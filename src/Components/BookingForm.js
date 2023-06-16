@@ -22,17 +22,25 @@ const handleSubmit = (e) => {
     occasion: {occasion}
   }
   const formData = data;
-  submitForm(formData)
+  submitForm(formData);
 }
+  const isEnabled = () => {
+    if (date && selectedTime && number && occasion) {
+      return true
+    } else {
+      return false
+    };
+    };
+
 
 
   return (
     <Container pt={200}>
       <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
         <label htmlFor='res-date'>Choose date</label>
-        <input type='date' id='res-date' onChange={changeDate} value={date} />
+        <input type='date' id='res-date' onChange={changeDate} value={date} required />
         <label htmlFor='res-time'>Choose time</label>
-        <select id='res-time' value={selectedTime} onChange={changeSelectedTime}>
+        <select id='res-time' value={selectedTime} onChange={changeSelectedTime} required>
           {availableTimes.map((time) => (
             <option key={time} value={time}>
               {time}
@@ -48,13 +56,14 @@ const handleSubmit = (e) => {
           id='guests'
           value={number}
           onChange={changeNumber}
+          required
         />
         <label htmlFor='occasion'>Occasion</label>
-        <select id='occasion' value={occasion} onChange={changeOccasion}>
+        <select id='occasion' value={occasion} onChange={changeOccasion} required>
           <option value='birthday'>Birthday</option>
           <option value='anniversary'>Anniversary</option>
         </select>
-        <input type='submit' value='Make Your reservation' />
+        <input type='submit' value='Make Your reservation' disabled={!isEnabled()} />
       </form>
     </Container>
   );
