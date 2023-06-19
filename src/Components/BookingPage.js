@@ -2,6 +2,7 @@ import { useState, useReducer, useEffect } from 'react';
 import BookingForm from './BookingForm';
 import { fetchAPI, submitAPI } from './api';
 import { useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 
 function BookingPage() {
   const today = new Date();
@@ -74,6 +75,7 @@ function BookingPage() {
         changeOccasion={changeOccasion}
         submitForm={handleSubmit}
       />
+        <Footer />
     </div>
   );
 }

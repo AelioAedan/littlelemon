@@ -1,4 +1,4 @@
-import { Button, Container, HStack, Heading, Image, Spacer, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, HStack, Heading, Hide, Image, Show, Spacer, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 
@@ -17,6 +17,11 @@ function Header() {
                         <Text color={"var(--highlight)"} pt={8} pb={8}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         </Text>
+                        <Show below="lg">
+                            <Box pb={8}>
+                                <Image src="restauranfood.jpg" fit={"cover"} borderRadius={"16px"} alt="Fresh baguettes getting served" />
+                            </Box>
+                        </Show>
                         <Button size={"lg"} bg={"var(--primary2)"} color={"var(--higlight2)"}
                             _hover={{
                                 background: "var(--secondary2)",
@@ -26,7 +31,9 @@ function Header() {
                         </Button>
                     </VStack>
                     <Spacer />
+                    <Hide below="lg">
                     <Image src="restauranfood.jpg" w={"375px"} h={"325px"} fit={"cover"} borderRadius={"16px"} alt="Fresh baguettes getting served" />
+                    </Hide>
                 </HStack>
             </Container>
         </Container>

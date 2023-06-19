@@ -11,12 +11,12 @@ function Specials() {
                         This weeks specials!
                     </Heading>
                     <Spacer></Spacer>
-                    <Button size={"lg"} bg={"var(--primary2)"} color={"var(--higlight2)"}
+                    <Button bg={"var(--primary2)"} color={"var(--higlight2)"}
                             _hover={{
                                 background: "var(--secondary2)",
                             }}
                         >
-                            Online Menu
+                            Menu
                         </Button>
                 </HStack>
                 <SimpleGrid spacing={4} templateColumns='repeat(auto-fill, minmax(300px, 1fr))'>
